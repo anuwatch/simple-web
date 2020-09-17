@@ -9,7 +9,7 @@ pipeline {
 	*/
 
 	//Run only on dev-node slave
-	agent { label 'cicd.ezmeral.yipintsoigroup.com'}
+	agent { label 'simple-web'}
 	parameters {
 		//string(name: 'TEST_PORT', defaultValue: '8080', description: 'Port for testing')
 		//string(name: 'PROD_HOST', defaultValue: 'k8s-7.ezmeral.hpe.lab', description: 'URL for production endpoint testing')
