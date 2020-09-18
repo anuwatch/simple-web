@@ -23,8 +23,8 @@ pipeline {
 			steps {
 				echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
 				dir('/root/simple-web') {
-					echo "Pull latest code from wannapsa/simple-web"
-					sh "git pull"
+					echo "Pull latest code from anuwathub/simple-web"
+					sh "git pull anuwathub/simple-web"
 				}
 			}
 		}
@@ -65,9 +65,9 @@ pipeline {
 					echo "Checkout git back to dev branch"
 					sh "git checkout dev"
 					echo "Building production docker image"
-					sh "docker build -t anuwatch/simple-web:dev ."
+					sh "docker build -t anuwathub/simple-web:dev ."
 					echo "Push Image to docker.hub"
-					sh "docker push anuwatch/simple-web:dev"
+					sh "docker push anuwathub/simple-web:dev"
 				}
 			}
 		}
