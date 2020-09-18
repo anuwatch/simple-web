@@ -15,7 +15,7 @@ pipeline {
 		//string(name: 'PROD_HOST', defaultValue: 'k8s-7.ezmeral.hpe.lab', description: 'URL for production endpoint testing')
 		//string(name: 'PROD_PORT', defaultValue: '30555', description: 'Port for production')
 		string(name: 'TEST_PORT', defaultValue: '8080', description: 'Port for testing')
-		string(name: 'PROD_HOST', defaultValue: 'https://gateway.ezmeral.yipintsoigroup.com:10002', description: 'URL for production endpoint testing')
+		string(name: 'PROD_HOST', defaultValue: 'gateway.ezmeral.yipintsoigroup.com', description: 'URL for production endpoint testing')
 		string(name: 'PROD_PORT', defaultValue: '30555', description: 'Port for production')
 	}
 	stages {
