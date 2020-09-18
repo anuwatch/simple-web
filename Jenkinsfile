@@ -22,11 +22,12 @@ pipeline {
 		stage('Prepare Test') {
 			steps {
 				//echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
-				//dir('/root/simple-web') {
+				dir('/root/simple-web') {
 					//echo "Pull latest code from anuwathub/simple-web"
 					//sh "git pull anuwathub/simple-web"
 				//}
 				checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'af354303-c366-444e-bf29-2ab9c2888c3a', url: 'https://github.com/anuwatch/simple-web.git']]])
+				}
 			}
 		}
 		stage('Build Test') {
