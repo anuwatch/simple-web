@@ -23,7 +23,7 @@ pipeline {
 			steps {
 				echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
 				dir('/root/simple-web') {
-					echo "Pull latest code from anuwatch/simple-web"
+					echo "Pull latest code from wannapsa/simple-web"
 					sh "git pull"
 				}
 			}
