@@ -62,10 +62,10 @@ pipeline {
 				dir('/root/simple-web') {
 					echo "Merge to master and push"
 					sh "git checkout master"
-					sh "git merge dev"
-					sh "git push"
+					//sh "git merge dev"
+					//sh "git push"
 					echo "Checkout git back to dev branch"
-					sh "git checkout dev"
+					//sh "git checkout dev"
 					echo "Building production docker image"
 					sh "docker build -t anuwathub/simple-web:dev ."
 					echo "Push Image to docker.hub"
